@@ -1,0 +1,40 @@
+name: ${project.name}
+version: ${project.version}
+main: org.bitbucket.ucchy.smasher.Smasher
+author: ucchy
+description: ${project.description}
+
+commands:
+  smasher:
+    description: The command for Smasher
+    usage: |
+           /<command> get - get new Smasher.
+           /<command> give (player) - give new Smasher to the specified player.
+           /<command> reload - reload configuration file.
+    permission: smasher.command
+    permission-message: You don't have "<permission>" permission.
+
+permissions:
+  smasher.command:
+    description: smasher command permission.
+    default: true
+  smasher.reload:
+    description: smasher reload command permission.
+    default: op
+  smasher.get:
+    description: smasher get command permission.
+    default: op
+  smasher.give:
+    description: smasher give command permission.
+    default: op
+  smasher.action:
+    description: smasher action permission.
+    default: true
+  smasher.*:
+    description: All of smasher permission.
+    children:
+      smasher.command: true
+      smasher.reload: true
+      smasher.get: true
+      smasher.give: true
+      smasher.action: true

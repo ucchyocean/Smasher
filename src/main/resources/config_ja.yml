@@ -1,0 +1,14 @@
+# ${project.name} v${project.version}
+# @author     ucchy
+# @license    LGPLv3
+# @copyright  Copyright ucchy 2014
+
+# Smasherとして使用するアイテムの素材を指定します。
+smasherMaterial: 'STICK'
+
+# クラフト可/不可を切り替えます。
+enableCraft: true
+
+# 1回の使用で消耗する、耐久度を設定します。
+# 0にすれば無制限に使用できます。
+durabilityCost: 2

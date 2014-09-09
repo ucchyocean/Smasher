@@ -1,0 +1,13 @@
+# ${project.name} v${project.version}
+# @author     ucchy
+# @license    LGPLv3
+# @copyright  Copyright ucchy 2014
+
+# Item material as Smasher.
+smasherMaterial: 'STICK'
+
+# Set enable/disable to craft Smasher.
+enableCraft: true
+
+# Durability cost per each using Smasher.
+durabilityCost: 2

@@ -257,7 +257,7 @@ public class Smasher extends JavaPlugin implements Listener {
                     if ( e instanceof LivingEntity && !e.equals(player) ) {
                         LivingEntity le = (LivingEntity)e;
                         le.damage(2, player);
-                        Vector velocity = le.getLocation().subtract(location).toVector();
+                        Vector velocity = le.getLocation().subtract(player.getLocation()).toVector();
                         velocity.setY(0.3).normalize().multiply(10);
                         le.setVelocity(velocity);
                     }
@@ -298,14 +298,6 @@ public class Smasher extends JavaPlugin implements Listener {
     }
 
     /**
-     * このプラグインのJarファイルを返す
-     * @return Jarファイル
-     */
-    protected File getJarFile() {
-        return getFile();
-    }
-
-    /**
      * 指定したプレイヤーの手に持っているアイテムの耐久値を減らす
      * @param player
      */
@@ -343,5 +335,13 @@ public class Smasher extends JavaPlugin implements Listener {
     @SuppressWarnings("deprecation")
     public static Player getPlayer(String name) {
         return Bukkit.getPlayerExact(name);
+    }
+
+    /**
+     * このプラグインのJarファイルを返す
+     * @return Jarファイル
+     */
+    protected File getJarFile() {
+        return getFile();
     }
 }

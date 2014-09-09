@@ -62,7 +62,7 @@ public class SmasherConfig {
         parent.reloadConfig();
         FileConfiguration conf = parent.getConfig();
 
-        String materialTemp = conf.getString("smasherMaterial", "STICK");
+        String materialTemp = conf.getString("smasherMaterial", "GOLD_AXE");
         smasherMaterial = Material.matchMaterial(materialTemp);
         if ( smasherMaterial == null ) {
             smasherMaterial = Material.STICK;

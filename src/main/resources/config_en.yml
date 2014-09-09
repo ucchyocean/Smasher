@@ -4,7 +4,7 @@
 # @copyright  Copyright ucchy 2014
 
 # Item material as Smasher.
-smasherMaterial: 'STICK'
+smasherMaterial: 'GOLD_AXE'
 
 # Set enable/disable to craft Smasher.
 enableCraft: true
